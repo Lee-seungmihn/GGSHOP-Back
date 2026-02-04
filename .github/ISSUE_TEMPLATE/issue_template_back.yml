@@ -11,16 +11,8 @@ body:
         ## 📌 Task Overview
         어떤 서비스를 개발하는지, 그리고 어떤 기능을 담당하는지 간략하게 설명해주세요.
 
-  public class ExampleController {
 
-//    consumes json 타입의 파일을 받아온다.
-//    @RequestMapping(value = "ex01", method = RequestMethod.GET, consumes = {}, produces = {})
-    @GetMapping("ex01")
-    public String ex01() {
-        log.info("ex01");
-        return "a";
-    }
-}
+- type: markdownattributes:value: | ###  To-Do List 이슈 해결을 위해 다음 작업들이 수행되어야 합니다: - API 명세서 작성/업데이트 - 도메인 엔티티 및 Repository 구현 - 서비스 로직(Business Logic) 개발 - 단위 테스트(JUnit5) 및 통합 테스트 완료 - API 문서화 (Swagger/RestDocs)
 
   - type: textarea
     id: api-details
