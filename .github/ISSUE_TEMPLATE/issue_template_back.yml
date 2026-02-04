@@ -11,17 +11,17 @@ body:
         ## 📌 Task Overview
         어떤 서비스를 개발하는지, 그리고 어떤 기능을 담당하는지 간략하게 설명해주세요.
 
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: ✅ To-Do List
-      description: 이번 이슈에서 완료해야 할 작업 목록을 작성하세요.
-      options:
-        - label: 도메인 엔티티 및 Repository 구현
-        - label: Controller 설계/구현
-        - label: 서비스 로직(Business Logic) 개발
-        - label: Mapper 설계
-        - label: View 연결
+  # - type: checkboxes
+  #   id: checklist
+  #   attributes:
+  #     label: ✅ To-Do List
+  #     description: 이번 이슈에서 완료해야 할 작업 목록을 작성하세요.
+  #     options:
+  #       - label: 도메인 엔티티 및 Repository 구현
+  #       - label: Controller 설계/구현
+  #       - label: 서비스 로직(Business Logic) 개발
+  #       - label: Mapper 설계
+  #       - label: View 연결
 
   - type: textarea
     id: api-details
