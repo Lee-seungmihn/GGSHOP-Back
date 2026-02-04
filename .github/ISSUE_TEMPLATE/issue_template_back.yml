@@ -12,8 +12,8 @@ body:
         어떤 서비스를 개발하는지, 그리고 어떤 기능을 담당하는지 간략하게 설명해주세요.
 
   # - type: checkboxes
-    # id: checklist
-    # attributes:
+    id: checklist
+    attributes:
       label: ✅ To-Do List
       description: 이번 이슈에서 완료해야 할 작업 목록을 작성하세요.
       options:
