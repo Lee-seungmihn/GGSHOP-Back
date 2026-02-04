@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 - 충전소 수정</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="https://wabiz-static-dev.s3.ap-northeast-2.amazonaws.com/static/favicon/favicon.png" type="image/x-icon" />
+
+        <!-- 폰트 -->
+        <link rel="stylesheet" href="/static/css/common/font.css" />
+
+        <!-- 스타일 초기화 css -->
+        <link rel="stylesheet" href="/static/css/common/reset.css" />
+
+        <!-- 공통 css -->
+        <link rel="stylesheet" href="/static/css/common/common.css">
+
+        <!-- fontawesome 꾸며진 폰트 -->
+        <link rel="stylesheet" href="/static/css/common/fontawesome.css">
+
+        <!-- 유틸 css -->
+        <link rel="stylesheet" href="/static/css/common/util.css" />
+
+        <!-- 유틸 2 -->
+        <link rel="stylesheet" href="/static/css/company-admin/company-utill.css"> 
+
+        <!-- 개별 css 스타일 -->
+        <link rel="stylesheet" href="/static/css/company-admin/company-charger-update.css" />
+
+</head>
+<body>
+    <main role="main">
+        <!-- 컨테이너 -->
+        <div class="container flex-1 quiry-contents-box" id="page-container">
+            <!-- 가로 정렬용 div -->
+            <div class="row align-items-center"></div>
+            
+            <!-- 전체 내용 영역 -->
+            <div class="row">
+                <div class="lg:col-9">
+
+                    <!-- 현재 페이지 안내 문구 -->
+                    <nav class="col font-size-md font-medium page-nav-reset">
+                        <ol class="breadcrumbs">
+                            <li title="충전소 관리">
+                                <a href="#!">충전소 관리</a>
+                            </li>
+                            <li title="충전소 수정">
+                                충전소 수정
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- 헤더: 제목 -->
+                    <header class="mb-5 header-style page-title">
+                        <h1>충전소 정보 수정</h1>
+                    </header> 
+
+                    <!-- 바디: 작성 내용 -->
+                    <div class="form height-fixed">
+
+                        <!-- 등록 정보 작성 폼 -->
+                        <!-- (서버 구현 시 action/method 설정) -->
+                        <form class="request-form" id="new-request">
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field string install-date">
+                                <label for="install-date">설치일자</label>
+                                <input type="text" id="install-date" name="installDate" value="2026-01-01" readonly>
+                                
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">※ 수정할 수 없는 정보입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field string station-number">
+                                <label for="station-number">충전소 번호</label>
+                                <input type="text" id="station-number" name="stationNumber" value="ST-000123" readonly>
+                                
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint" >※ 수정할 수 없는 정보입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field string install-address">
+                                <label for="install-address">설치주소</label>
+                                <input type="text" id="install-address" name="installAddress">
+                               
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">변경 사항을 입력해주세요.</p>
+                               
+                                <!-- 에러 메세지 -->
+                                <p class="field-error" hidden>※필수 입력 항목입니다.</p>
+                            </div>
+
+                            <!-- 특이사항 작성 -->
+                            <div class="form-field text charger-note no-required-mark">
+                                <label for="charger-note">특이사항</label>
+                                <textarea name="chargerNote" id="charger-note"></textarea>
+                                <p>* 추가로 확인이 필요하거나, 관리가 필요한 내용이 있을 경우 작성해주세요. </p>
+                            </div>
+                       
+                            <!-- 푸터: 취소/완료 버튼 -->
+                            <footer>
+                                <input class="btn-cancel" type="submit" name="commit" value="취소">
+                                <input class="btn-submit" type="submit" name="commit" value="수정 완료">
+                            </footer>
+                        </form>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+<script src="/static/js/company-admin/company-charger-update.js"></script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 - 회원(직원) 정보 수정</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="https://wabiz-static-dev.s3.ap-northeast-2.amazonaws.com/static/favicon/favicon.png" type="image/x-icon" />
+
+        <!-- 폰트 -->
+        <link rel="stylesheet" href="/static/css/common/font.css" />
+
+        <!-- 스타일 초기화 css -->
+        <link rel="stylesheet" href="/static/css/common/reset.css" />
+
+        <!-- 공통 css -->
+        <link rel="stylesheet" href="/static/css/common/common.css">
+
+        <!-- fontawesome 꾸며진 폰트 -->
+        <link rel="stylesheet" href="/static/css/common/fontawesome.css">
+
+        <!-- 유틸 css -->
+        <link rel="stylesheet" href="/static/css/common/util.css" />
+
+        <!-- 유틸 2 -->
+        <link rel="stylesheet" href="/static/css/company-admin/company-utill.css"> 
+
+        <!-- 개별 css 스타일 -->
+        <link rel="stylesheet" href="/static/css/company-admin/company-employee-update.css" />
+
+</head>
+<body>
+    <main role="main">
+        <!-- 컨테이너 -->
+        <div class="container flex-1 quiry-contents-box" id="page-container">
+            <!-- 가로 정렬용 div -->
+            <div class="row align-items-center"></div>
+            
+            <!-- 전체 내용 영역 -->
+            <div class="row">
+                <div class="lg:col-9">
+
+                    <!-- 현재 페이지 안내 문구 -->
+                    <nav class="col font-size-md font-medium page-nav-reset">
+                        <ol class="breadcrumbs">
+                            <li title="임직원 관리">
+                                <a href="#!">임직원 관리</a>
+                            </li>
+                            <li title="직원 정보 수정">
+                                직원 정보 수정
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- 헤더: 제목 -->
+                    <header class="mb-5 header-style page-title">
+                        <h1>직원 정보 수정</h1>
+                    </header> 
+
+                    <!-- 바디: 작성 내용 -->
+                    <div class="form height-fixed">
+
+                        <!-- 등록 정보 작성 폼 -->
+                        <!-- (서버 구현 시 action/method 설정) -->
+                        <form class="request-form" id="new-request">
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field string join-date">
+                                <label for="join-date">가입일자</label>
+                                <input type="text" id="join-date" name="joinDate" value="2026-01-01" readonly>
+                                
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">※ 수정할 수 없는 정보입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field string employee-number">
+                                <label for="employee-number">사원번호</label>
+                                <input type="text" id="employee-number" name="employeeNumber" value="260101-00123" readonly>
+                                
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint" >※ 수정할 수 없는 정보입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field required string employee-name">
+                                <label for="employee-name">이름</label>
+                                <input type="text" id="employee-name" name="employeeName">
+                               
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">변경 사항을 입력해주세요.</p>
+                               
+                                <!-- 에러 메세지 -->
+                                <p class="field-error" hidden>※필수 입력 항목입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field required string department">
+                                <label for="department">소속 부서</label>
+                                <input type="text" id="department" name="department">
+                               
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">변경 사항을 입력해주세요.</p>
+                               
+                                <!-- 에러 메세지 -->
+                                <p class="field-error" hidden>※필수 입력 항목입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field required string position">
+                                <label for="position">직급</label>
+                                <input type="text" id="position" name="position">
+                               
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">변경 사항을 입력해주세요.</p>
+                               
+                                <!-- 에러 메세지 -->
+                                <p class="field-error" hidden>※필수 입력 항목입니다.</p>
+                            </div>
+
+                            <!-- 작성 내용 -->
+                            <div class="form-field required string email">
+                                <label for="email">이메일</label>
+                                <input type="email" id="email" name="email">
+                               
+                                <!-- 기본 노출 메세지 -->
+                                <p class="field-hint">변경 사항을 입력해주세요.</p>
+                               
+                                <!-- 에러 메세지 -->
+                                <p class="field-error" hidden>※필수 입력 항목입니다.</p>
+                            </div>
+
+                            <!-- 특이사항 작성 -->
+                            <div class="form-field text employee-note no-required-mark">
+                                <label for="employee-note">특이사항</label>
+                                <textarea name="employeeNote" id="employee-note"></textarea>
+                                <p>* 추가로 확인이 필요하거나, 관리가 필요한 내용이 있을 경우 작성해주세요. </p>
+                            </div>
+                       
+                            <!-- 푸터: 취소/완료 버튼 -->
+                            <footer>
+                                <input class="btn-cancel" type="submit" name="commit" value="취소">
+                                <input class="btn-submit" type="submit" name="commit" value="수정 완료">
+                            </footer>
+                        </form>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+<script src="/static/js/company-admin/company-employee-update.js"></script>
+</html>
