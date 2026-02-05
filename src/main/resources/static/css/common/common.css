@@ -216,15 +216,15 @@ button[disabled].button-mint {
     vertical-align: top;
 }
 /* input util */
-.input.input-sm{height: 32px;min-height: 32px;font-size: 14px;font-weight: 400;line-height: 1.5}
-.input.input-md{height: 40px;min-height: 40px;font-size: 14px;font-weight: 400;line-height: 1.5}
+.input.input-sm{height: 32px;min-height: 32px;font-size: 14px;font-weight: 400;line-height: 1.5;}
+.input.input-md{height: 40px;min-height: 40px;font-size: 14px;font-weight: 400;line-height: 1.5;}
 .input.input-lg{height: 48px;min-height: 48px;font-size: 16px;font-weight: 400;line-height: 1.5;}
-.input.input-xl{height: 56px;min-height: 56px;font-size: 18px;font-weight: 400;line-height: 1.5}
+.input.input-xl{height: 56px;min-height: 56px;font-size: 18px;font-weight: 400;line-height: 1.5;}
 /* button util */
-.button-sm{height: 32px;min-height: 32px;font-size: 14px;font-weight: 400;line-height: 1.5}
-.button-md{height: 40px;min-height: 40px;font-size: 14px;font-weight: 400;line-height: 1.5}
+.button-sm{height: 32px;min-height: 32px;font-size: 14px;font-weight: 400;line-height: 1.5;}
+.button-md{height: 40px;min-height: 40px;font-size: 14px;font-weight: 400;line-height: 1.5;}
 .button-lg{height: 48px;min-height: 48px;font-size: 16px;font-weight: 400;line-height: 1.5;}
-.button-xl{height: 56px;min-height: 56px;font-size: 18px;font-weight: 400;line-height: 1.5}
+.button-xl{height: 56px;min-height: 56px;font-size: 18px;font-weight: 400;line-height: 1.5;}
 
 /* yearBtns */
 .yearBtns{gap: 8px; margin-bottom: 16px; overflow-x: auto; padding-bottom: 4px;}

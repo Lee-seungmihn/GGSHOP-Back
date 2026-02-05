@@ -23,9 +23,8 @@ window.addEventListener('scroll', function() {
     const pageTop = document.querySelector(".quickButton-pageTop");
     let thisScroll = window.scrollY || document.documentElement.scrollTop;
     console.log(document.documentElement.scrollTop);
-    thisScroll > defaultScroll || window.scrollY <= 0  ? pageTop.classList.remove("active") : pageTop.classList.add("active");
     defaultScroll = thisScroll <= 0 ? 0 : thisScroll;
-    // pageTop.classList[1] === "active"
+    thisScroll > defaultScroll || window.scrollY <= 0  ? pageTop.classList.remove("active") : pageTop.classList.add("active");
 }, false);
 
 window.addEventListener("wheel", scrollStop);

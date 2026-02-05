@@ -8,14 +8,14 @@ const confirms = document.querySelectorAll('.button-confirm');
 const closes = document.querySelectorAll('.button-close');
 
 const inputContainers = document.querySelectorAll(".currentPassword-wrap");
-const inputFields = document.querySelectorAll('.inputField');
+const inputFields = document.querySelectorAll('.FormModal-content .inputField');
 //
 
 // 포커스
 inputFields.forEach((inputField) => {
     const input = inputField.querySelector('.input');
     const button = inputField.querySelector('.button-inInput');
-
+    console.log(button);
     inputField.addEventListener('focusin', () => {
         inputField.classList.add('focus');
     });
@@ -27,6 +27,7 @@ inputFields.forEach((inputField) => {
             e.preventDefault();
         });
         button.addEventListener('mousedown', (e) => {
+            console.log(input.type);
             const isPassword = input.type === 'password';
             input.type = isPassword ? 'text' : 'password';
         });
@@ -56,6 +57,7 @@ const modalCloses = () => {
         modal.classList.remove('active');
     });
 };
+
 // ※닫기 버튼에 넣어주세요.
 // onclikc="onlyeClose([닫을 모달아이디]);"
 const onlyClose = (onlyOne) => {

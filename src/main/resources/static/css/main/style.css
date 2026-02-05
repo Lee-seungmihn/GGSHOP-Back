@@ -8,7 +8,7 @@
 .card-wrap{position: relative;overflow: hidden;display: flex;flex-direction: column;flex-shrink: 0;gap: 16px;justify-content: space-between;width: 100%;}
 .card-wrap.card_hasShadow{box-shadow: 0 0 5px #0a16460f, 0 16px 16px -1px #0a16461a;padding: 16px;border-radius: 8px;background-color: #fff;}
 .card-content{display: flex;flex-direction: column;gap: 8px;}
-.card-content.card-horizontal{flex-direction: row;gap: 8px;align-items: flex-start;}
+.card-content.card-horizontal{flex-direction: row;gap: 12px;align-items: flex-start;}
 .card-content.card-horizontal .thumb-container{height: 84px;}
 
 /* section */

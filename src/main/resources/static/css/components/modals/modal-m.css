@@ -1,6 +1,10 @@
 /* common */
-.modal{position: relative; z-index: 999; visibility: hidden; opacity: 0; transition: opacity 0.5s;}
+.modal{position: relative; z-index: 999; visibility: hidden; opacity: 0; transition: opacity 0.3s, visibility 0s, background 0.3s;}
 .modal.active{visibility: visible; opacity: 1; transition: .5s;}
+.modal.bottomSheet{opacity: 1; transition: opacity 0.3s, visibility 0s 0s;}
+.modal.bottomSheet.active{transition: opacity 0s, visibility 0s 0s;}
+.modal.bottomSheet > div > div{transform: translate(0, 100%); transition: transform 0.3s ease-in-out;}
+.modal.bottomSheet.active > div > div{transform: translate(0, 0);}
 
 
 /* inputField,input */
