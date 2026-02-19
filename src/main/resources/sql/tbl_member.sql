@@ -14,8 +14,11 @@ CREATE TABLE tbl_member
     updated_date    DATETIME                       DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()
 );
 
-DROP TABLE tbl_member;
 set foreign_key_checks = 1;
+
+delete from tbl_member;
+
+DROP TABLE tbl_member;
+
 select * from tbl_member;
-SELECT * FROM member WHERE memberEmail = '입력한이메일';
 
