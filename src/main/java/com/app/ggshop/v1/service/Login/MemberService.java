@@ -15,14 +15,14 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Transactional(rollbackFor = Exception.class)
 public class MemberService {
-    private final MemberDAO memberDAO;
+    private final MemberDAO memberDAO; // DAO 다양한 비지니스 로직 구현
 
     //    이메일 검사(true: 사용가능)
     public boolean checkEmail(String memberEmail){
         return memberDAO.findByMemberEmail(memberEmail).isEmpty();
     }
     //    회원가입
-    public void join(MemberDTO memberDTO){
+    public void join(MemberDTO memberDTO){ // id받아와야되서 dto
         memberDTO.setProvider(Provider.THREETIER);
         memberDAO.save(memberDTO);
         memberDAO.saveOAuth(memberDTO.toOAuthVO());

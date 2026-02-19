@@ -8,6 +8,8 @@ import lombok.*;
 @Getter@Setter @ToString
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OAuthDTO {
 
     private Long id;

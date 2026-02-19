@@ -13,7 +13,7 @@ public interface MemberMapper {
     public Optional<MemberDTO> selectByMemberEmail(String memberEmail);
     //    회원가입
     public void insert(MemberDTO memberDTO);
-    //    oauth
+    //    kakao
     public void insertOauth(OAuthVO oAuthVO);
     //    로그인
     public Optional<MemberVO> selectMemberForLogin(MemberDTO memberDTO);

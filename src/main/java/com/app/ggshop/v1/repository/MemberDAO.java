@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
+//  의존성 주입
 @RequiredArgsConstructor
 public class MemberDAO {
     private final MemberMapper memberMapper;
@@ -23,7 +24,7 @@ public class MemberDAO {
     public void save(MemberDTO memberDTO){
         memberMapper.insert(memberDTO);
     }
-    //    oauth
+    //    kako
     public void saveOAuth(OAuthVO oAuthVO){
         memberMapper.insertOauth(oAuthVO);
     }

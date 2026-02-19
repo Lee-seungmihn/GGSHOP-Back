@@ -45,7 +45,7 @@ public class KaKaoService {
 
 //            파라미터를 구성한다(ref. kakao rest api login documentation)
             stringBuilder.append("grant_type=authorization_code");
-            stringBuilder.append("&client_id=6c9664c00ac5573fa3d8f1caf80e67f3");
+            stringBuilder.append("&client_id=c03e2bc9dd98290165897636f33947f3");
             stringBuilder.append("&redirect_uri=http://localhost:10000/kakao/login");
             stringBuilder.append("&code=").append(code);
 
