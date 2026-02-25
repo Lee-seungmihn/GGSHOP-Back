@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원탈퇴</title>
-    <link rel="stylesheet" href="/static/css/deleteacconrt/deleteacconrt.css">
+    <link rel="stylesheet" href="/css/deleteacconrt/deleteacconrt.css">
+    <link rel="stylesheet" href="/css/components/modals/modal-m.css">
+    <link rel="stylesheet" href="/css/common/font.css">
+    <link rel="stylesheet" href="/css/common/reset.css">
+    <link rel="stylesheet" href="/css/common/util.css">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/common/fontawesome.css">
+
 </head>
 
 <body>
@@ -16,20 +23,23 @@
             <div id="wz-header">
                 <header class="Header_container- Header_sticky">
                     <div class="Header_content">
-                        <div class="Header_left"><button class="StyledComponent_container"
+                        <a class="Header_left" href="/profile/settings">
+                            <button class="StyledComponent_container"
                                 aria-label="뒤로 가기" type="button"><svg viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg" width="24" class="WithProps_icon"
                                     style="height: 24px; width: 24px;">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"
                                         fill="#495057"></path>
-                                </svg></button></div>
+                                </svg>
+                            </button>
+                        </a>
                         <div class="Header_center" style="max-width: calc(-80px + 100vw);">
                             <h1 class="StyledComponent_container Title_container Title_center">회원탈퇴
                             </h1>
                         </div>
                         <div class="Header_right"><a class="StyledComponent_container" aria-label="홈으로 가기"
-                                href="/web/main"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24"
+                                href="login/main"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24"
                                     class="WithProps_icon" style="height: 24px; width: 24px;">
                                     <path d="M21.6 7.679l-9.6-6.4-9.6 6.4V21h1.2V8.321l8.4-5.6 8.4 5.6V21h1.2V7.679z"
                                         fill="#495057"></path>
@@ -82,52 +92,89 @@
                         <dt>미상환 투자금 환급 불이익 감수</dt>
                         <dd>아직 상환되지 않은 투자금이 있을때, 투자금을 돌려받지 못할 불이익과 위험 감수</dd>
                     </dl>
+<!--                    <input type="button" value="탈퇴하기" class="wz button primary mt20" id="verify-next" disabled>-->
+<!--                    <h2 class="subtitle">본인 확인</h2>-->
+<!--                    <p class="description">안전한 탈퇴를 위해 본인 인증 절차를 진행합니다. 본인확인하기 버튼을 클릭해주세요.</p>-->
+<!--                    <div id="verify-step1" class="verifyBox">-->
+<!--                        <input type="button" value="본인 확인하기" class="wz button primary" id="verify-next">-->
+<!--                    </div>-->
+<!--                    <div id="verify-step2" class="verifyBox" style="display:none">-->
+<!--                        <div class="wz input action userVerify" style="padding-right:0">-->
+<!--                            <input type="text" name="respon" value="jc*****@naver.com" readonly="readonly">-->
+<!--                            <input type="hidden" name="pfKey" id="pfKey">-->
+<!--                            <button type="button" class="wz button" id="verify-retry">재전송</button>-->
+<!--                        </div>-->
+<!--                        <div class="userVerifyConfirm">-->
+<!--                            <form name="verify-code-confirm" style="padding-right:0" onsubmit="">-->
+<!--                                <div class="wz input action verifyCode">-->
+<!--                                    <input type="number" name="code" id="code" placeholder="인증번호 입력" maxlength="6">-->
+<!--                                    <span class="timer" id="timer" style="right:100px">03:15</span>-->
+<!--                                    <button type="submit" class="wz button gray" id="verify-confirm">인증 확인</button>-->
+<!--                                </div>-->
+<!--                            </form>-->
+<!--                            <em id="verify-error" style="display:none">인증번호를 잘못 입력하셨습니다. 다시 입력해 주세요.</em>-->
+<!--                            <em id="verify-time-over" style="display:none">인증시간이 초과되었습니다. 재전송 버튼를 눌러주세요.</em>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="checkboxWrapper">
                         <label class="wz checkbox">
                             <input type="checkbox" name="agree" value="Y" id="dropConfirm">
                             <span>상기 GG# 탈퇴 시 유의 사항을 확인하였습니다.</span>
                         </label>
                     </div>
-
-                    <h2 class="subtitle">본인 확인</h2>
-                    <p class="description">안전한 탈퇴를 위해 본인 인증 절차를 진행합니다. 본인확인하기 버튼을 클릭해주세요.</p>
-                    <div id="verify-step1" class="verifyBox">
-                        <input type="button" value="본인 확인하기" class="wz button primary" id="verify-next">
-                    </div>
-                    <div id="verify-step2" class="verifyBox" style="display:none">
-                        <div class="wz input action userVerify" style="padding-right:0">
-                            <input type="text" name="respon" value="jc*****@naver.com" readonly="readonly">
-                            <input type="hidden" name="pfKey" id="pfKey">
-                            <button type="button" class="wz button" id="verify-retry">재전송</button>
-                        </div>
-                        <div class="userVerifyConfirm">
-                            <form name="verify-code-confirm" style="padding-right:0" onsubmit="">
-                                <div class="wz input action verifyCode">
-                                    <input type="number" name="code" id="code" placeholder="인증번호 입력" maxlength="6">
-                                    <span class="timer" id="timer" style="right:100px">03:15</span>
-                                    <button type="submit" class="wz button gray" id="verify-confirm">인증 확인</button>
-                                </div>
-                            </form>
-                            <em id="verify-error" style="display:none">인증번호를 잘못 입력하셨습니다. 다시 입력해 주세요.</em>
-                            <em id="verify-time-over" style="display:none">인증시간이 초과되었습니다. 재전송 버튼를 눌러주세요.</em>
-                        </div>
-                    </div>
                     <hr>
+
                     <div class="dropButton">
-                        <input type="button" value="회원 탈퇴" class="wz button red" disabled="disabled" id="btnDropOut">
+                        <input type="button" value="회원 탈퇴" class="wz button red" disabled id="btnDropOut" onclick="modalOpen('modalConfirm')">
                     </div>
                 </div>
             </main>
-            <section id="alertify-o" class="alertify-o alertify-o-alert "><a id="alertify-o-resetFocusBack"
-                    class="alertify-o-resetFocus" href="#">Reset Focus</a>
-                <article class="alertify-o-inner">
-                    <p class="alertify-o-message" style="font-size:15px;padding-top:2px;">인증번호가 전송되었습니다.</p>
-                    <nav class="alertify-o-buttons"><button class="alertify-o-button alertify-o-button-ok"
-                            id="alertify-o-ok">확인</button></nav>
-                </article><a id="alertify-o-resetFocus" class="alertify-o-resetFocus" href="#">Reset Focus</a>
-            </section>
+<!--            <section id="alertify-o" class="alertify-o alertify-o-alert "><a id="alertify-o-resetFocusBack"-->
+<!--                    class="alertify-o-resetFocus" href="#">Reset Focus</a>-->
+<!--                <article class="alertify-o-inner">-->
+<!--                    <p class="alertify-o-message" style="font-size:15px;padding-top:2px;">인증번호가 전송되었습니다.</p>-->
+<!--                    <nav class="alertify-o-buttons"><button class="alertify-o-button alertify-o-button-ok"-->
+<!--                            id="alertify-o-ok">확인</button></nav>-->
+<!--                </article><a id="alertify-o-resetFocus" class="alertify-o-resetFocus" href="#">Reset Focus</a>-->
+<!--            </section>-->
+        </div>
+
+        <div id="modalConfirm" class="modal"> <!-- active 컨트롤 필요 -->
+            <div class="Modal_overlay">
+                <div class="confirmModal-container">
+                    <div class="confirmModal-header">
+                        <div class="confirmModal-button">
+                            <button class="button button-close" type="button" onclick="modalCloses()">
+                                <span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" class="WithProps-icon" style="height: 24px; width: 24px">
+                                            <path d="M11.9998 11.1515L4.424 3.57565L3.57547 4.42418L11.1513 12L3.57549 19.5759L4.42401 20.4244L11.9998 12.8486L19.5757 20.4244L20.4242 19.5759L12.8484 12L20.4242 4.4242L19.5757 3.57567L11.9998 11.1515Z" fill="#495057"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="confirmModal-title">정말 탈퇴하시겠어요?</div>
+                    </div>
+                    <div class="confirmModal-content">
+                        <div class="confirmModal-message">잠깐! 유의사항을 다 확인하였을까요?</div>
+                    </div>
+                    <div class="confirmModal-footer">
+                        <div class="buttonGroup">
+                            <!-- 토스트 기능 넣기 -->
+                            <button id="byeUserBtn" class="button button-size button-mint button-confirm button-contain" type="button">
+                                <span>
+                                    <span>탈퇴하기</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
-    <script src="/static/js/deleteacconrt/deleteacconrt.js"></script>
-
+    <script src="/js/deleteacconrt/deleteacconrt.js"></script>
+    <script src="/js/deleteacconrt/service.js"></script>
+    <script src="/js/deleteacconrt/event.js"></script>
+    <script src="/js/modals/modal-m.js"></script>
 </html>

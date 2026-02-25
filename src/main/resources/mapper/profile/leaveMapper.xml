@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.ggshop.v1.mapper.profile.LeaveMapper">
+    <update id="deleteMember">
+        update tbl_member
+        set member_status = 'inactive',
+            updated_date = current_timestamp
+        where id = #{id}
+    </update>
+</mapper>
