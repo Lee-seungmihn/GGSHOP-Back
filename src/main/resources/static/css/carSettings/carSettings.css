@@ -435,6 +435,10 @@ body {
     flex-direction: column;
     gap: 16px;
     max-width: 560px;
+    margin: 0 auto;
+}
+.MySimplePaySettingApp_simplePayInfo .MySimplePaySettingApp_simplePayInfo{
+    margin: 0;
 }
 
 .SimplePayCard_root {
@@ -631,7 +635,11 @@ body {
     line-height: 1.5;
     color: #495057;
 }
-
+.SimplePayCard_infoWrap.SimplePayCard_registrationDate{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
 
 .WithProps_icon {
     display: block;
@@ -799,7 +807,7 @@ body {
     color: rgb(255, 255, 255);
     border-color: rgb(0, 196, 196);
 }
-.Button_button:not(.Button_loading).Button_disabled__dTtjo, .Button_button:not(.Button_loading):disabled, .Button_button:not(.Button_loading)[disabled] {
+.Button_button:not(.Button_loading).Button_disabled, .Button_button:not(.Button_loading):disabled, .Button_button:not(.Button_loading)[disabled] {
     opacity: 0.4;
     cursor: default;
     pointer-events: none;

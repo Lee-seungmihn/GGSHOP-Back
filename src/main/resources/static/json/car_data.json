@@ -1,0 +1,22 @@
+[
+  { "userName": "test1", "carPlateNumber": "123가 4567","carFilter": "TWOWAY", "carModel": "아이오닉 6", "carEnergyGauge": "82%", "batteryHealth": "Excellent" },
+  { "userName": "test2", "carPlateNumber": "98나 1234","carFilter": "TWOWAY", "carModel": "EV9", "carEnergyGauge": "45%", "batteryHealth": "Good" },
+  { "userName": "test3", "carPlateNumber": "55다 9999","carFilter": "TWOWAY", "carModel": "모델 3", "carEnergyGauge": "12%", "batteryHealth": "Caution" },
+  { "userName": "test4", "carPlateNumber": "11라 7777","carFilter": "TWOWAY", "carModel": "GV60", "carEnergyGauge": "95%", "batteryHealth": "Excellent" },
+  { "userName": "test5", "carPlateNumber": "22마 1111","carFilter": "ONEWAY", "carModel": "아이오닉 5", "carEnergyGauge": "60%", "batteryHealth": "Good" },
+  { "userName": "test6", "carPlateNumber": "33바 2222","carFilter": "TWOWAY", "carModel": "포터 EV", "carEnergyGauge": "33%", "batteryHealth": "Normal" },
+  { "userName": "test7", "carPlateNumber": "44사 3333","carFilter": "TWOWAY", "carModel": "봉고 EV", "carEnergyGauge": "78%", "batteryHealth": "Good" },
+  { "userName": "test8", "carPlateNumber": "55아 4444","carFilter": "ONEWAY", "carModel": "모델 Y", "carEnergyGauge": "5%", "batteryHealth": "Critical" },
+  { "userName": "test9", "carPlateNumber": "66자 5555","carFilter": "TWOWAY", "carModel": "타이칸", "carEnergyGauge": "88%", "batteryHealth": "Excellent" },
+  { "userName": "test10", "carPlateNumber": "77차 6666","carFilter": "TWOWAY", "carModel": "코나 EV", "carEnergyGauge": "52%", "batteryHealth": "Good" },
+  { "userName": "test11", "carPlateNumber": "88카 7777","carFilter": "TWOWAY", "carModel": "니로 EV", "carEnergyGauge": "21%", "batteryHealth": "Caution" },
+  { "userName": "test12", "carPlateNumber": "99타 8888","carFilter": "TWOWAY", "carModel": "폴스타 2", "carEnergyGauge": "67%", "batteryHealth": "Good" },
+  { "userName": "test13", "carPlateNumber": "10하 9999","carFilter": "ONEWAY", "carModel": "볼트 EV", "carEnergyGauge": "41%", "batteryHealth": "Normal" },
+  { "userName": "test14", "carPlateNumber": "21거 1010","carFilter": "TWOWAY", "carModel": "레이 EV", "carEnergyGauge": "100%", "batteryHealth": "Excellent" },
+  { "userName": "test15", "carPlateNumber": "32너 2020","carFilter": "TWOWAY", "carModel": "EQS", "carEnergyGauge": "74%", "batteryHealth": "Excellent" },
+  { "userName": "test16", "carPlateNumber": "43더 3030","carFilter": "ONEWAY", "carModel": "e-트론", "carEnergyGauge": "55%", "batteryHealth": "Good" },
+  { "userName": "test17", "carPlateNumber": "54러 4040","carFilter": "TWOWAY", "carModel": "i4", "carEnergyGauge": "18%", "batteryHealth": "Caution" },
+  { "userName": "test18", "carPlateNumber": "65머 5050","carFilter": "ONEWAY", "carModel": "iX", "carEnergyGauge": "91%", "batteryHealth": "Excellent" },
+  { "userName": "test1", "carPlateNumber": "76버 6060","carFilter": "ONEWAY", "carModel": "EV6", "carEnergyGauge": "38%", "batteryHealth": "Normal" },
+  { "userName": "test1", "carPlateNumber": "87서 7070","carFilter": "TWOWAY", "carModel": "모델 X", "carEnergyGauge": "63%", "batteryHealth": "Good" }
+]
