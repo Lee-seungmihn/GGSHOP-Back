@@ -15,7 +15,7 @@ const inputFields = document.querySelectorAll('.FormModal-content .inputField');
 inputFields.forEach((inputField) => {
     const input = inputField.querySelector('.input');
     const button = inputField.querySelector('.button-inInput');
-    console.log(button);
+    // console.log(button);
     inputField.addEventListener('focusin', () => {
         inputField.classList.add('focus');
     });
