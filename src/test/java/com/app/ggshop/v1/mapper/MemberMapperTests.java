@@ -4,6 +4,7 @@ import com.app.ggshop.v1.common.enumeration.Provider;
 import com.app.ggshop.v1.domain.MemberVO;
 import com.app.ggshop.v1.dto.MemberDTO;
 import com.app.ggshop.v1.service.Login.MemberService;
+import com.app.ggshop.v1.service.profile.ProfileService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -21,19 +22,22 @@ public class MemberMapperTests {
 
     @Autowired
     private MemberMapper memberMapper;
+    @Autowired
+    private MemberService memberService;
+    @Autowired
+    private ProfileService profileService;
 
     @Test
-    @Transactional
+//    @Transactional
     public void testInsert() {
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setMemberEmail("test1@gmail.com");
-        memberDTO.setMemberPassword("1234");
+        memberDTO.setMemberPassword("123`4");
         memberDTO.setMemberName("test");
         memberDTO.setProvider(Provider.THREETIER);
 
         memberMapper.insert(memberDTO);
         memberMapper.insertOauth(memberDTO.toOAuthVO());
-
     }
 
     @Test
@@ -44,6 +48,12 @@ public class MemberMapperTests {
 
         Optional<MemberVO> foundMember = memberMapper.selectMemberForLogin(memberDTO);
         log.info("{}.....",foundMember.isEmpty());
+    }
+
+    @Test
+    public void testDeleteMember(){
+        Long thisId = 4L;
+        profileService.leaveMember(thisId);
     }
 
 }
