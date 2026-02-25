@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.app.ggshop.v1.mapper.profile.ProfileMapper">
+    <!--  프로필 등록  -->
     <insert id="insertMemberFile">
         insert into tbl_member_file (id, member_id) values (#{id}, #{memberId})
     </insert>
+    <!--  프로필 삭제  -->
     <update id="deleteByProfile">
         update tbl_file SET file_status = 'inactive', updated_date = NOW() WHERE id IN (SELECT id FROM tbl_member_file WHERE member_id = #{memberId}) AND file_status = 'active'
     </update>
+    <!--  받은 유저 ID로 프로필 파일검색  -->
     <select id="selectProfileByMemberId" resultType="profileDTO">
         select f.id,f.file_name,f.file_original_name,f.file_size,f.file_path,f.file_content_type,mf.member_id,f.created_date,f.updated_date
         FROM tbl_file f
@@ -16,4 +19,11 @@
         AND f.file_status = 'active'
         ORDER BY f.id DESC  LIMIT 1
     </select>
+    <!--  받은 ID로 유저 정보 삭제(약한 삭제)  -->
+    <update id="deleteMember">
+        update tbl_member
+        set member_status = 'inactive',
+            updated_date = current_timestamp
+        where id = #{id}
+    </update>
 </mapper>

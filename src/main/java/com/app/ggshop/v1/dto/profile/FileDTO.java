@@ -15,5 +15,5 @@ public class FileDTO {
     private String filePath;
     private FileContentType fileContentType;
     private String createDate;
-    private String UpdateDate;
+    private String updateDate;
 }
