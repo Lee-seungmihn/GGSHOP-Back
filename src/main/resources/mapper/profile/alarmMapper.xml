@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.ggshop.v1.mapper.profile.AlarmMapper">
+    <!--  조회  -->
+    <select id="selectWishAlarm" resultType="AlarmDTO">
+        select notification_wish_status as wishStatus, notification_wish_member_id as memberId
+        from tbl_notification_wish where notification_wish_member_id = #{memberId}
+    </select>
+    <select id="selectReviewAlarm" resultType="AlarmDTO">
+        select notification_review_status as reviewStatus, notification_review_member_id as memberId
+        from tbl_notification_review where notification_review_member_id = #{memberId}
+    </select>
+    <select id="selectFollowAlarm" resultType="AlarmDTO">
+        select notification_follow_status as followStatus, notification_follow_member_id as memberId
+        from tbl_notification_follow where notification_follow_member_id = #{memberId}
+    </select>
+    <select id="selectCommentAlarm" resultType="AlarmDTO">
+        select notification_comment_status as commentStatus, notification_comment_member_id as memberId
+        from tbl_notification_comment where notification_comment_member_id = #{memberId}
+    </select>
+    <select id="selectBoardAlarm" resultType="AlarmDTO">
+        select notification_board_status as boardStatus, notification_board_member_id as memberId
+        from tbl_notification_board where notification_board_member_id = #{memberId}
+    </select>
+    <!--  등록  -->
+    <insert id="insertWishAlarm">
+        insert into tbl_notification_wish (notification_wish_status, notification_wish_member_id)
+        values (#{status}, #{memberId})
+    </insert>
+    <insert id="insertReviewAlarm">
+        insert into tbl_notification_review (notification_review_status, notification_review_member_id)
+        values (#{status}, #{memberId})
+    </insert>
+    <insert id="insertFollowAlarm">
+        insert into tbl_notification_follow (notification_follow_status, notification_follow_member_id)
+        values (#{status}, #{memberId})
+    </insert>
+    <insert id="insertCommentAlarm">
+        insert into tbl_notification_comment (notification_comment_status, notification_comment_member_id)
+        values (#{status}, #{memberId})
+    </insert>
+    <insert id="insertBoardAlarm">
+        insert into tbl_notification_board (notification_board_status, notification_board_member_id)
+        values (#{status}, #{memberId})
+    </insert>
+    <!--  수정  -->
+    <update id="updateWishAlarm">
+        UPDATE tbl_notification_wish set notification_wish_status = #{status}
+        where notification_wish_member_id = #{memberId}
+    </update>
+    <update id="updateReviewAlarm">
+        UPDATE tbl_notification_review set notification_review_status = #{status}
+        where notification_review_member_id = #{memberId}
+    </update>
+    <update id="updateFollowAlarm">
+        UPDATE tbl_notification_follow set notification_follow_status = #{status}
+        where notification_follow_member_id = #{memberId}
+    </update>
+    <update id="updateCommentAlarm">
+        UPDATE tbl_notification_comment set notification_comment_status = #{status}
+        where notification_comment_member_id = #{memberId}
+    </update>
+    <update id="updateBoardAlarm">
+        UPDATE tbl_notification_board set notification_board_status = #{status}
+        where notification_board_member_id = #{memberId}
+    </update>
+</mapper>
