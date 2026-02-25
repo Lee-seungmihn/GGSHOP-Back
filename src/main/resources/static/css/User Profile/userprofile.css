@@ -1967,7 +1967,7 @@ a.Button_button.Button_block {
     color: #343a40
 }
 
-.Button_button:not(.Button_loading).Button_disabled__dTtjo,.Button_button:not(.Button_loading):disabled,.Button_button:not(.Button_loading)[disabled] {
+.Button_button:not(.Button_loading).Button_disabled,.Button_button:not(.Button_loading):disabled,.Button_button:not(.Button_loading)[disabled] {
     opacity: .4;
     cursor: default;
     pointer-events: none
@@ -27172,6 +27172,7 @@ label.Radio_radio.Radio_error>.Radio_icon {
     gap: 8px;
     align-items: center
 }
+
 
 .SimplePayCard_container.SimplePayCard_expireWarning {
     border-color: #f66
