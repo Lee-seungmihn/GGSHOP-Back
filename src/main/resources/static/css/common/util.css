@@ -315,3 +315,6 @@
 .tc{text-align: center !important;}
 .tl{text-align: left !important;}
 .tr{text-align: right !important;}
+
+.f-red{color: red !important;}
+.none{display: none !important;}
