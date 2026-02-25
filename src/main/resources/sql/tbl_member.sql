@@ -4,7 +4,7 @@ CREATE TABLE tbl_member
     id              BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     member_email    VARCHAR(255) NOT NULL UNIQUE,
     member_password VARCHAR(255),
-    member_name     VARCHAR(255) NOT NULL,
+    member_name     VARCHAR(255) NOT NULL default '이름을 입력해주세요.',
     member_nickname VARCHAR(255) NOT NULL default '닉네임을입력해주세요.',
     member_birth    VARCHAR(255),
     member_address  VARCHAR(255),
